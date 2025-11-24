@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// Vite proxy will forward /api → http://hotel-booking.runasp.net/api
+// use API URL from Vercel environment
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 15000,
 });
 
